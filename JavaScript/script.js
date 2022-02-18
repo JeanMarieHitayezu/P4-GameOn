@@ -9,7 +9,6 @@ const submitBtn = document.getElementById('btn-submit');
 const locationCheckboxes = document.querySelectorAll("input[name='location']");
 const conditionsCheckboxes = document.querySelector("input[name='conditions']");
 
-
 // FORM FIELDS EVENTS
 document.querySelector('form').addEventListener('change', formValidation);
 document.querySelector('form').addEventListener('submit', submitForm);
@@ -65,7 +64,7 @@ function disableSubmitBtn () {
 function firstNameValidation () {
     let parent = firstName.closest('div');
     showError(parent);
-    if (firstName.value.length < 2) {
+    if (firstName.value.trim().length < 2) {
       return false;
     }
     if (firstName.value.length > 20) {
@@ -82,7 +81,7 @@ function firstNameValidation () {
 function lastNameValidation () {
     let parent = lastName.closest('div');
     showError(parent);
-    if (lastName.value.length < 2) {
+    if (lastName.value.trim().length < 2) {
       return false
     }
     if (!/^([^0-9]*)$/.test(lastName.value)) {
