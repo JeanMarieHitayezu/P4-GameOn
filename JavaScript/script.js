@@ -21,3 +21,44 @@ for (checkbox of locationCheckboxes) {
   checkbox.addEventListener('change', locationValidation);
 }
 conditionsCheckboxes.addEventListener('change', conditionsValidation);
+
+// FUNCTIONS
+modalFormLaunch();
+modalFormClose();
+disableSubmitBtn();
+
+function closeBtn() {
+  let btn = document.createElement("BUTTON");     
+  btn.innerHTML = "Fermer";                   
+  document.querySelector('.modal-body').appendChild(btn);
+  btn.className = "btn-submit";
+  btn.style.marginTop = "50px"
+  btn.onclick = function() {
+    modalbg.style.display = "none";
+  };
+}
+
+// DEDICATED FUNCTIONS TO FORM VALIDITY CHECK
+
+/* FIRST NAME CHECK */
+
+
+/* LAST NAME CHECK */
+
+
+/* EMAIL ADRESS CHECK */
+
+
+/* AGE CHECK */
+
+
+/* TOURNAMENTS COUNT CHECK */
+
+
+/* TOURNAMENT CITY CHECK */
+
+
+/* TERMS AND CONDITIONS USE CHECK */
+
+
+/* FORM VALIDATION TERMINATION */
