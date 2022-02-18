@@ -103,7 +103,20 @@ function emailValidation () {
   }
 
 /* AGE CHECK */
-
+function birthdateValidation () {
+    let parent = birthdate.closest('div');
+    let selectedDate = new Date(birthdate.value);
+    let now = new Date();
+    showError(parent);
+    if (!/^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/.test(reserve.birthdate.value)) {
+      return false;
+    }
+    if (selectedDate > now) {
+      return false;
+    }
+    hideError(parent);
+    return true;
+  }
 
 /* TOURNAMENTS COUNT CHECK */
 
