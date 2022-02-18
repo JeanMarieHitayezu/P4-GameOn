@@ -130,7 +130,16 @@ function tournamentCountValidation () {
   }
 
 /* TOURNAMENT CITY CHECK */
-
+function locationValidation () {
+    let parent = checkbox.closest('div');
+    showError(parent);
+    for (checkbox of locationCheckboxes) {
+      if (checkbox.checked) {
+        hideError(parent);
+        return true;
+      }
+    }
+  }
 
 /* TERMS AND CONDITIONS USE CHECK */
 
