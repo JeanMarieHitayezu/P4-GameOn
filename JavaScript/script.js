@@ -9,6 +9,7 @@ const submitBtn = document.getElementById('btn-submit');
 const locationCheckboxes = document.querySelectorAll("input[name='location']");
 const conditionsCheckboxes = document.querySelector("input[name='conditions']");
 
+
 // FORM FIELDS EVENTS
 document.querySelector('form').addEventListener('change', formValidation);
 document.querySelector('form').addEventListener('submit', submitForm);
@@ -67,7 +68,7 @@ function firstNameValidation () {
     if (firstName.value.length < 2) {
       return false;
     }
-    if (firstName.value.length > 15) {
+    if (firstName.value.length > 20) {
       return false;
     }  
     if (!/^([^0-9]*)$/.test(firstName.value)) {
@@ -153,4 +154,37 @@ function conditionsValidation () {
   }
 
 /* FORM VALIDATION TERMINATION */
+function formValidation() {
 
+    if (firstNameValidation ()
+        && lastNameValidation ()
+        && emailValidation ()
+        && birthdateValidation ()
+        && tournamentCountValidation ()
+        && locationValidation ()
+        && conditionsValidation()) 
+        {
+          enableSubmitBtn();
+          return true;
+        }
+        disableSubmitBtn();
+        return false;
+  }
+  
+  function submitForm(e) {
+    e.preventDefault();
+    document.querySelector('.modal-body').innerHTML = " ";
+    modalBody.style.height = "700px";
+    modalBody.style.display = "flex";
+    modalBody.style.flexDirection = "column";
+    modalBody.style.justifyContent = "flex-end";
+    thankyouMessage();
+    closeBtn();
+  }
+  
+  function thankyouMessage() {
+    let thanks = document.createElement("P");
+    thanks.innerText = 'Merci ! Votre réservation a été reçue.';              
+    document.querySelector('.modal-body').appendChild(thanks);
+    thanks.style.marginBottom = "200px";
+  }
