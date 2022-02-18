@@ -91,8 +91,16 @@ function lastNameValidation () {
     return true;
   }
 
-/* EMAIL ADRESS CHECK */
-
+/* EMAIL ADDRESS CHECK */
+function emailValidation () {
+    let parent = email.closest('div');
+    showError(parent);
+    if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(reserve.email.value)) {
+      return false;
+    }
+    hideError(parent);
+    return true;
+  }
 
 /* AGE CHECK */
 
