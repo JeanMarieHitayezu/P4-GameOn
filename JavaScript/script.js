@@ -38,6 +38,18 @@ function closeBtn() {
   };
 }
 
+function disableSubmitBtn () {
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = '0.5';
+    submitBtn.style.cursor = 'not-allowed';
+  }
+  
+  function enableSubmitBtn () {
+    submitBtn.disabled = false;
+    submitBtn.style.opacity = '1';
+    submitBtn.style.cursor = 'pointer';
+  }
+
 // DEDICATED FUNCTIONS TO FORM VALIDITY CHECK
 
 /* FIRST NAME CHECK */
