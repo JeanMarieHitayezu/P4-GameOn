@@ -12,9 +12,12 @@ const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const modalCloseBtn = document.getElementsByClassName('close');
+const form = document.getElementsByName('reserve');
 
 // launch modal event
-modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
+function modalFormLaunch() {
+  modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
+}
 
 // launch modal form
 function launchModal() {
@@ -22,8 +25,13 @@ function launchModal() {
 }
 
 // Close modal form
-function closeiModal() {
+function closeModal() {
   modalbg.style.display="none";
+}
+
+function modalFormClose() {
+  closeModal.onclick = function() {    
+  }
 }
 
 // Close modal event
