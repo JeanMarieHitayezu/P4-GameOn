@@ -50,6 +50,14 @@ function disableSubmitBtn () {
     submitBtn.style.cursor = 'pointer';
   }
 
+  function showError(e) {
+    e.setAttribute('data-error-visible', true);
+  }
+  
+  function hideError(e) {
+    e.setAttribute('data-error-visible', false)
+  }
+
 // DEDICATED FUNCTIONS TO FORM VALIDITY CHECK
 
 /* FIRST NAME CHECK */
