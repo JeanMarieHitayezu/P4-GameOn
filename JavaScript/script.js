@@ -119,7 +119,15 @@ function birthdateValidation () {
   }
 
 /* TOURNAMENTS COUNT CHECK */
-
+function tournamentCountValidation () {
+    let parent = tournamentCount.closest('div');
+    showError(parent);
+    if (tournamentCount.value < '0') {
+      return false;
+    } 
+      hideError(parent);
+      return true;
+  }
 
 /* TOURNAMENT CITY CHECK */
 
