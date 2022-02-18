@@ -61,10 +61,35 @@ function disableSubmitBtn () {
 // DEDICATED FUNCTIONS TO FORM VALIDITY CHECK
 
 /* FIRST NAME CHECK */
-
+function firstNameValidation () {
+    let parent = firstName.closest('div');
+    showError(parent);
+    if (firstName.value.length < 2) {
+      return false;
+    }
+    if (firstName.value.length > 15) {
+      return false;
+    }  
+    if (!/^([^0-9]*)$/.test(firstName.value)) {
+      return false;
+    }
+    hideError(parent);
+    return true;
+  }
 
 /* LAST NAME CHECK */
-
+function lastNameValidation () {
+    let parent = lastName.closest('div');
+    showError(parent);
+    if (lastName.value.length < 2) {
+      return false
+    }
+    if (!/^([^0-9]*)$/.test(lastName.value)) {
+      return false;
+    }
+    hideError(parent);
+    return true;
+  }
 
 /* EMAIL ADRESS CHECK */
 
