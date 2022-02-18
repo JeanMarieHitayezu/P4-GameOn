@@ -142,6 +142,15 @@ function locationValidation () {
   }
 
 /* TERMS AND CONDITIONS USE CHECK */
-
+function conditionsValidation () {
+    let parent = conditionsCheckboxes.closest('div');
+    showError(parent);
+    if (!conditionsCheckboxes.checked) {
+      return false;
+    } 
+      hideError(parent);
+      return true;
+  }
 
 /* FORM VALIDATION TERMINATION */
+
