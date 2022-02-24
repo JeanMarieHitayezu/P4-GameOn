@@ -23,8 +23,8 @@ for (checkbox of locationCheckboxes) {
 conditionsCheckboxes.addEventListener('change', conditionsValidation);
 
 // FUNCTIONS
-modalFormLaunch();
-modalFormClose();
+
+/*modalFormClose();*/
 disableSubmitBtn();
 
 function closeBtn() {
@@ -40,23 +40,23 @@ function closeBtn() {
 
 function disableSubmitBtn () {
     submitBtn.disabled = true;
-    submitBtn.style.opacity = '0.5';
-    submitBtn.style.cursor = 'not-allowed';
+    submitBtn.style.opacity = '1';
+    submitBtn.style.cursor = 'allowed';
   }
   
-  function enableSubmitBtn () {
+function enableSubmitBtn () {
     submitBtn.disabled = false;
     submitBtn.style.opacity = '1';
     submitBtn.style.cursor = 'pointer';
-  }
+}
 
-  function showError(e) {
+function showError(e) {
     e.setAttribute('data-error-visible', true);
-  }
+}
   
-  function hideError(e) {
+function hideError(e) {
     e.setAttribute('data-error-visible', false)
-  }
+}
 
 // DEDICATED FUNCTIONS TO FORM VALIDITY CHECK
 
@@ -116,7 +116,7 @@ function birthdateValidation () {
     }
     hideError(parent);
     return true;
-  }
+}
 
 /* TOURNAMENTS COUNT CHECK */
 function tournamentCountValidation () {
@@ -127,7 +127,7 @@ function tournamentCountValidation () {
     } 
       hideError(parent);
       return true;
-  }
+}
 
 /* TOURNAMENT CITY CHECK */
 function locationValidation () {
@@ -139,7 +139,7 @@ function locationValidation () {
         return true;
       }
     }
-  }
+}
 
 /* TERMS AND CONDITIONS USE CHECK */
 function conditionsValidation () {
@@ -150,7 +150,7 @@ function conditionsValidation () {
     } 
       hideError(parent);
       return true;
-  }
+}
 
 /* FORM VALIDATION TERMINATION */
 function formValidation() {
@@ -168,7 +168,7 @@ function formValidation() {
         }
         disableSubmitBtn();
         return false;
-  }
+}
   
   function submitForm(e) {
     e.preventDefault();

@@ -14,7 +14,7 @@
   <body>
     <div class="topnav" id="myTopnav">
       <div class="header-logo">
-      <img alt="logo" src="./Img/Logo.png" width="auto" height="auto" />
+      <img alt="logo" src="./Img/Logo.png"/>
     </div>
     <div class="main-navbar">
       
@@ -26,7 +26,6 @@
       <a href="javascript:void(0);" class="icon" onclick="editNav()">
         <i class="fa fa-bars"></i>
       </a>
-    </div>
     </div>
   </div>
     <main>
@@ -63,7 +62,7 @@
               onsubmit="return validate();"
             >
               <div
-                class="formData" data-error="Veuillez entrer 2 caractères ou plus pour ce champ.">
+                class="formData" data-error="Veuillez entrer 2 caractères ou plus.">
                 <label for="first">Prénom</label><br>
                 <input
                   class="text-control"
@@ -73,7 +72,7 @@
                 /><br>
               </div>
               <div
-                class="formData" data-error input="Veuillez entrer 2 caractères ou plus pour ce champ.">
+                class="formData" data-error="Veuillez entrer 2 caractères ou plus.">
                 <label for="last">Nom</label><br>
                 <input
                   class="text-control"
@@ -83,7 +82,7 @@
                 /><br>
               </div>
               <div
-                class="formData"data-error input="Veuillez entrer une adresse émail valide." >
+                class="formData" data-error="Veuillez entrer une adresse émail valide." >
                 <label for="email">E-mail</label><br>
                 <input
                   class="text-control"
@@ -93,24 +92,23 @@
                 /><br>
               </div>
               <div
-                class="formData" data-error input="Veuillez entrer votre date de naissance." >
+                class="formData" data-error="Veuillez entrer votre date de naissance." >
                 <label for="birthdate">Date de naissance</label><br>
                 <input
                   class="text-control"
                   type="date"
                   id="birthdate"
                   name="birthdate"
-                  min="01/01/2012"
                 /><br>
               </div>
               <div
-                class="formData" data-error input="Veuillez entrer le nombre de participations.">
+                class="formData" data-error="Veuillez entrer le nombre de participations.">
                 <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
-                class="formData" data-error input="Veuillez choisir une option.">
+                class="formData" data-error="Veuillez sélectionner une ville.">
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -180,7 +178,7 @@
               </div>
 
               <div
-                class="formData" data-error input="Vous devez accepter les conditions d'utilisation.">
+                class="formData" data-error="Veuillez accepter les conditions d'utilisation.">
                 <input
                   class="checkbox-input"
                   type="checkbox"
@@ -204,7 +202,6 @@
                 id="btn-submit"
                 class="btn-submit"
                 type="submit"
-                class="button"
                 value="C'est parti"
               />
             </form>

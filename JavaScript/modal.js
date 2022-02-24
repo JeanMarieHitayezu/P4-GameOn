@@ -15,6 +15,7 @@ const modalCloseBtn = document.getElementsByClassName('close');
 const form = document.getElementsByName('reserve');
 
 // launch modal event
+modalFormLaunch();
 function modalFormLaunch() {
   modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 }
@@ -24,17 +25,13 @@ function launchModal() {
   modalbg.style.display = "block";
 }
 
+// Close modal event
+modalCloseBtn[0].addEventListener('click', closeModal);
+
 // Close modal form
 function closeModal() {
   modalbg.style.display="none";
 }
 
-function modalFormClose() {
-  closeModal.onclick = function() {    
-  }
-}
-
-// Close modal event
-modalCloseBtn[0].addEventListener('click', closeModal);
 
 
